@@ -1,0 +1,34 @@
+{
+ "doctype": "DocType",
+ "name": "AI Search Index",
+ "module": "AI Search",
+ "custom": 0,
+ "istable": 0,
+ "autoname": "hash",
+ "fields": [
+  {
+   "fieldname": "reference_doctype",
+   "label": "Document Type",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "reference_name",
+   "label": "Document Name",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "content",
+   "label": "Indexed Content",
+   "fieldtype": "Long Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ]
+}
