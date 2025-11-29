@@ -1,4 +1,0 @@
-recursive-include ai_search *.py
-recursive-include ai_search *.json
-recursive-include ai_search *.md
-recursive-exclude *.pyc
