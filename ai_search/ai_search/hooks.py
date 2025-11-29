@@ -1,6 +1,0 @@
-app_name = "ai_search"
-app_title = "AI Search"
-app_publisher = "ajmalajz"
-app_description = "AI-powered semantic search for ERPNext"
-app_email = "test@example.com"
-app_license = "MIT"
