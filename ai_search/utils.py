@@ -1,0 +1,29 @@
+
+import requests
+import frappe
+
+MEILI_URL = frappe.conf.get("meili_url")
+API_KEY = frappe.conf.get("meili_api_key")
+INDEX = "items"
+
+HEADERS = {"Authorization": f"Bearer {API_KEY}"} if API_KEY else {}
+
+def sync_item(doc, method=None):
+    """Push a single Item to Meilisearch on insert/update."""
+    if not MEILI_URL:
+        return  # silently ignore if not configured
+    data = {
+        "name": doc.name,
+        "item_code": doc.item_code,
+        "item_name": doc.item_name,
+        "description": doc.description,
+    }
+    try:
+        requests.post(
+            f"{MEILI_URL}/indexes/{INDEX}/documents",
+            headers=HEADERS,
+            json=[data],
+            timeout=8,
+        )
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), title=f"ai_search.sync_item error: {e}")
