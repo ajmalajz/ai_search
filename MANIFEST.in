@@ -1,6 +1,0 @@
-# MANIFEST.in
-include ai_search/hooks.py
-include ai_search/patches.txt
-include ai_search/public/*
-include ai_search/templates/*
-include ai_search/custom_queries/*
