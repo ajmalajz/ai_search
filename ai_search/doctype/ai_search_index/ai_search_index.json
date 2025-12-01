@@ -1,0 +1,19 @@
+{
+    "name": "AI Search Index",
+    "module": "AI Search",
+    "custom": 1,
+    "fields": [
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Data"
+        },
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data"
+        },
+        {
+            "fieldname": "tags",
+            "fieldtype": "Small Text"
+        }
+    ]
+}

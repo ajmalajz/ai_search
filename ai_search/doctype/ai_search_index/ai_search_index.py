@@ -1,0 +1,1 @@
+# Placeholder for AI Search Index doctype logic
