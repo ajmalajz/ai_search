@@ -1,29 +1,22 @@
 # ai_search
 
-Custom Frappe app to override ERPNext link field search using SQLite-based fuzzy search.
+Frappe app to override ERPNext link search.
 
-## Installation Steps
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ajmalajz/ai_search.git
-   ```
-
-2. Navigate to the app directory:
-   ```bash
-   cd ai_search
-   ```
-
-3. Install the app on your Frappe/ERPNext site:
-   ```bash
-   bench get-app https://github.com/ajmalajz/ai_search.git
-   bench --site your-site-name install-app ai_search
-   bench migrate
-   ```
-
-4. Restart bench:
-   ```bash
-   bench restart
-   ```
-
-After installation, link field searches will use the custom fuzzy search logic.
+## Required structure
+```
+ai_search/
+ ├─ setup.py
+ ├─ MANIFEST.in
+ ├─ requirements.txt
+ ├─ README.md
+ └─ ai_search/
+     ├─ __init__.py
+     ├─ hooks.py
+     ├─ modules.txt
+     ├─ search.py
+     └─ doctype/
+         └─ ai_search_index/
+             ├─ __init__.py
+             ├─ ai_search_index.json
+             └─ ai_search_index.py
+```
